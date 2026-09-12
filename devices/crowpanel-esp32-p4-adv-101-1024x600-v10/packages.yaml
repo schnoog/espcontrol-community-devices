@@ -83,6 +83,8 @@ substitutions:
   cover_art_live_image_updates: "false"
 
 packages:
+  audio: !include device/audio.yaml
+  microphone: !include device/microphone.yaml
   upstream_a:
     url: https://github.com/jtenniswood/espcontrol
     ref: v2.8.6
@@ -189,5 +191,4 @@ http_request:
   buffer_size_tx: 4096
 
 
-audio: !include device/audio.yaml
-#microphone: !include device/microphone.yaml
+
