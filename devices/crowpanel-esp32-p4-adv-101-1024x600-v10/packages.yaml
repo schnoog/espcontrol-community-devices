@@ -190,4 +190,4 @@ http_request:
 
 
 audio: !include device/audio.yaml
-microphone: !include device/microphone.yaml
+#microphone: !include device/microphone.yaml
