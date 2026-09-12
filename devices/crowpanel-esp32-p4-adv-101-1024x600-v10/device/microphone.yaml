@@ -16,14 +16,7 @@
 # the threshold default is negative and MUST be calibrated on hardware using
 # the exposed "Noise Level" reading. Flagged for on-device tuning.
 # =============================================================================
-- platform: i2s_audio
-  id: onboard_mic
-  i2s_audio_id: i2s_in
-  adc_type: external
-  i2s_din_pin: GPIO26
-  channel: left
-  sample_rate: 16000
-  bits_per_sample: 32bit
+
 # ---------------------------------------------------------------------------
 # Input I2S bus (clocks on the bus; DIN on the microphone platform below).
 # ---------------------------------------------------------------------------
@@ -40,8 +33,15 @@ i2s_audio:
   - id: i2s_in
     i2s_lrclk_pin: GPIO24
 
-
-
+microphone:
+  - platform: i2s_audio
+    id: onboard_mic
+    i2s_audio_id: i2s_in
+    adc_type: external
+    i2s_din_pin: GPIO26
+    channel: left
+    sample_rate: 16000
+    bits_per_sample: 32bit
 
 # ---------------------------------------------------------------------------
 # Software mic mute (privacy). The D1001 exposes no hardware mic-disable line,
