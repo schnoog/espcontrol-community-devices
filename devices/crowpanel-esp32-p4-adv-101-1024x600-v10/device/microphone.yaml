@@ -22,16 +22,16 @@
 # ---------------------------------------------------------------------------
 
 
-i2s_audio:
-  - id: i2s_mic
-    i2s_lrclk_pin: GPIO24
+#i2s_audio:
+#  - id: i2s_mic
+#    i2s_lrclk_pin: GPIO24
 
-  - id: i2s_out
-    i2s_lrclk_pin: GPIO21
-    i2s_bclk_pin: GPIO22
+#  - id: i2s_out
+#    i2s_lrclk_pin: GPIO21
+#    i2s_bclk_pin: GPIO22
 
-  - id: i2s_in
-    i2s_lrclk_pin: GPIO24
+#  - id: i2s_in
+#    i2s_lrclk_pin: GPIO24
 
 microphone:
   - platform: i2s_audio
