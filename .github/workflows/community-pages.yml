@@ -30,8 +30,8 @@ on:
       - package.json
   # Daily rebuild so the download-stats page stays semi-live (GitHub's
   # download_count updates roughly hourly; a daily refresh is plenty).
-  schedule:
-    - cron: "17 6 * * *"
+  #schedule:
+  #  - cron: "17 6 * * *"
   workflow_dispatch:
 
 permissions:
