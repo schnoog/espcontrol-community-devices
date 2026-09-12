@@ -19,11 +19,7 @@
 # ---------------------------------------------------------------------------
 # Output I2S bus (clocks live on the bus; DOUT lives on the speaker platform).
 # ---------------------------------------------------------------------------
-i2s_audio:
-  - id: i2s_out
-    i2s_bclk_pin: GPIO22
-    i2s_lrclk_pin: GPIO21
-    i2s_mclk_pin: GPIO33
+
 
 # ===== ES8311 Audio Codec Configuration =====
 i2s_audio:
@@ -34,7 +30,7 @@ i2s_audio:
   - id: i2s_out
     i2s_lrclk_pin: GPIO21
     i2s_bclk_pin: GPIO22
-
+    i2s_mclk_pin: GPIO33
 # ---------------------------------------------------------------------------
 # External amplifier enable. Gated on media activity (default OFF); driven by
 # the media_player triggers below so the amp only draws current / avoids idle
