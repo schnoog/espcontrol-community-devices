@@ -36,10 +36,9 @@
 microphone:
   - platform: i2s_audio
     id: onboard_mic
-    i2s_audio_id: i2s_in
+    i2s_audio_id: i2s_mic
     adc_type: external
     i2s_din_pin: GPIO26
-    channel: left
     sample_rate: 16000
     bits_per_sample: 32bit
 
