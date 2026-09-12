@@ -4,7 +4,7 @@ import deviceSidebar from './device-sidebar.json'
 // Structure and layout closely follow upstream EspControl's docs
 // (github.com/jtenniswood/espcontrol) so users move between the two sites
 // without relearning navigation.
-const hostname = 'https://lamiskin.github.io/espcontrol-community-devices/'
+const hostname = 'https://schnoog.github.io/espcontrol-community-devices/'
 
 export default defineConfig({
   title: 'EspControl Community Devices',
