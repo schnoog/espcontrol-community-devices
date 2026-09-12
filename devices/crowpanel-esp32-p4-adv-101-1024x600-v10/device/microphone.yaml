@@ -21,8 +21,16 @@
 # Input I2S bus (clocks on the bus; DIN on the microphone platform below).
 # ---------------------------------------------------------------------------
 i2s_audio:
+  # I2S bus for PDM microphone (clock only, data is on i2s_din_pin)
+  - id: i2s_mic
+    i2s_lrclk_pin: GPIO24
+  # I2S bus for external speaker amplifier
+  - id: i2s_out
+    i2s_lrclk_pin: GPIO21
+    i2s_bclk_pin: GPIO22
   - id: i2s_in
     i2s_lrclk_pin: GPIO24
+# ------------------------
 
 # ---------------------------------------------------------------------------
 # ES7210 ADC - I2C register config only; the audio path is the i2s_audio
