@@ -19,7 +19,11 @@
 # ---------------------------------------------------------------------------
 # Output I2S bus (clocks live on the bus; DOUT lives on the speaker platform).
 # ---------------------------------------------------------------------------
-
+i2s_audio:
+  - id: i2s_out
+    i2s_bclk_pin: GPIO22
+    i2s_lrclk_pin: GPIO21
+    i2s_mclk_pin: GPIO33
 
 # ===== ES8311 Audio Codec Configuration =====
 i2s_audio:
@@ -42,9 +46,8 @@ switch:
     internal: true
     restore_mode: ALWAYS_OFF
     pin:
-      xl9535: xl9535_hub
-      number: 13
-
+      number: GPIO30
+      inverted: true
 # ---------------------------------------------------------------------------
 # Speaker pipeline: media + announcement resamplers -> mixer -> ES8311 speaker.
 # Buffers/tasks kept in PSRAM to protect the internal-RAM/LVGL budget.
